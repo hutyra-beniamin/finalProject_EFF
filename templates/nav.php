@@ -45,12 +45,12 @@
         </div>
       </li>
 			<li>
-				<button class="btn btn-md bg-transparent btnli"><a href="unterzeichnen.php">UNTERZEICHNEN</a></button>
+				<button class="btn btn-md bg-transparent btnli"><a href="unterzeichnen.php?#1">UNTERZEICHNEN</a></button>
             </li>
     </ul>
     <ul>
-			<li>
-				<a class="login" href="login.php" >Admin</a>
+			<li class="list-unstyled">
+				<a href="login.php">Admin</a>
       </li>
     </ul>
   </div>

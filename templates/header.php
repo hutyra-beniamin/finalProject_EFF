@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Entrepreneurs For Future Austria: Wirtschaft für mehr Klimaschutz</title>
-	<meta name="description" content="Wirtschaft will mehr Klimaschutz: Unternehmerinnen* und Unternehmer* schließen sich zusammen, um mit Entrepreneurs For Future ihren Beitrag zu leisten." />
+   <title>Entrepreneurs For Future Austria: Wirtschaft will mehr Klimaschutz</title>
+	<meta name="description" content="Unternehmerinnen* und Unternehmer* schließen sich zusammen, um mit Entrepreneurs For Future ihren Beitrag zu leisten." />
 	<meta name="robots" content="index, follow" />
 
 <!-- CSS only -->
@@ -16,7 +16,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
-<?php
-    /*Just for your server-side code*/
-    header('Content-Type: text/html; charset=ISO-8859-1');
-?>
+<!-- <?php
+    /*Just for the server-side code*/
+    // header('Content-Type: text/html; charset=ISO-8859-1');
+?> -->
