@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">  
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Über Entrepreneurs For Future Austria: Wirtschaft für mehr Klimaschutz</title>
 	<meta name="description" content="Wirtschaft will mehr Klimaschutz: Unternehmerinnen* und Unternehmer* schließen sich zusammen, um mit Entrepreneurs For Future ihren Beitrag zu leisten." />
