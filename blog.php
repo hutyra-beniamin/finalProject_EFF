@@ -16,7 +16,7 @@ $xml = simplexml_load_string($response);
 ?>
 
 <div class="container container-fluid">
-<h1>Blog</h1>
+<h1>Sustainable Business News</h1>
 <div class="row mt-4">
 
 <?php

@@ -12,11 +12,12 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
-<h1>Diese Unternehmerinnen & Unternehmer sind bereits Teil von #EntrepreneursForFuture:</h1>
-
+<h1>Unternehmerinnen & Unternehmer</h1>
+<p>die sich als EntrepreneursForFuture engagieren und die Stellungnahme unterzeichnet haben</p>
+<br>
 
 <?php
-$sql = "SELECT * FROM `entrepreneurs`";
+$sql = "SELECT * FROM `entrepreneure`";
 $result = $connect->query($sql);
 ?>
 
@@ -34,17 +35,18 @@ $result = $connect->query($sql);
 
 
 <?php
-$sql = "SELECT * FROM `entrepreneurs`";
+$sql = "SELECT * FROM `entrepreneure`";
 $result = $connect->query($sql);
 if($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {
-$name = $row["name"];
+$firstname = $row["firstname"];
+$lastname = $row["lastname"];
 $company = $row["company"];
-$url = $row["url"];
+$url = $row["website"];
 $address = $row["city"];
 $country = $row["country"];
 echo "<tr>
-        <td> $name </td>
+        <td> $firstname $lastname </td>
         <td><a href='$url' target='_blank'>$company</a></td>
         <td>$address</td>
         <td>$country</td>

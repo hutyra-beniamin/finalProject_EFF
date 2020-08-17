@@ -51,5 +51,6 @@ Wenn wir jetzt handeln, ist eine geregelte Dekarbonisierung der Wirtschaft mögl
 <br><hr>
 
 <?php
+require_once 'templates/unterzeichnen.php';
 require_once 'templates/footer.php';
 ?>

@@ -20,9 +20,9 @@ a:hover {
     background-color: lightgray;
 }
 
-ul {
-    list-style-type: none;
-}
+/* ul {
+    list-style-type: circle;
+} */
 
 .btnli > a:hover {
     padding: 1rem;
@@ -39,8 +39,14 @@ ul {
     float: right;
     margin: 0;
     padding: 0;
-    /* margin-top: 0.5vw;
-    margin-right: 10vw; */
+}
+
+input  {
+    width: 55vw;
+}
+
+input, select {
+    margin-left: 1vw;
 }
 
 /* #map {
