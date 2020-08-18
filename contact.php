@@ -27,10 +27,10 @@ require_once 'templates/nav.php';
     <textarea class="form-control" name="message" id="message" rows="10"></textarea>
   </div>
   <div class="form-group">
-    <label for="email">Name</label>
+    <label for="email">E-Mail</label>
     <input type="text" class="form-control" id="email" name="email">
   </div>
-  <button type="submit" class="btn btn-outline-secondary">Submit</button>
+  <button type="submit" class="btn btn-outline-secondary">Abschicken</button>
 </form>
 
 </div>
