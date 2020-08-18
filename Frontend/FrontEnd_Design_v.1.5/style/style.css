@@ -1,0 +1,130 @@
+div {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+
+/* navbar styling*/
+
+#logo {
+    width: 7vw !important;
+    height: 5vw !important;
+}
+
+#navbar {
+    background-color: #f3f9fb !important;
+    /*position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 1.5vw;*/
+}
+
+
+/* hero section styling */
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/img2.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero_text {
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    padding-top: 3vw;
+    font-size: 2vw;
+    padding-bottom: 3vw;
+}
+
+#hero_text_bg {
+    background-color: #113f67 !important;
+}
+
+
+/*About section styling */
+
+
+/*Blog section styling*/
+
+#blog {
+    background-color: #87c0cd;
+    margin-top: 4vw;
+    padding: 3vw;
+}
+
+.card {
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+
+/*Signed section styling*/
+
+#signed {
+    /* The image used */
+    background-image: url("../img/signed.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.signed_text {
+    font-size: 2vw;
+}
+
+
+/*Sign section styling*/
+
+#sign {
+    background-color: #226597;
+    margin-top: 4vw;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*Social Media section styling*/
+
+#social {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+#social div a>img {
+    width: 30vw !important;
+    height: 23vw !important;
+}
+
+
+/*Contact section styling*/
+
+#contact {
+    margin-top: 3.5vw;
+    padding: 1.5vw;
+    background-color: #87c0cd;
+}
+
+
+/*Footer section styling*/
+
+#footer {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: #113f67;
+}
+
+#footer div p>a {
+    text-decoration: none;
+    color: white;
+}
