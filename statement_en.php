@@ -11,7 +11,7 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
-<h1>Entrepreneurs statement on school strike for climate (#EntrepreneursForFuture)</h1>
+<h1>Entrepreneurs Statement on School Strike for Climate (#EntrepreneursForFuture)</h1>
 
 <div>
 <p>
@@ -48,6 +48,78 @@ If we act now, an orderly decarbonisation of our economy will be possible. This 
 #EntrepreneursForFuture
 
 </p>
+
+<div class= "container container-fluid">
+<b>We invite active entrepreneurs, founders and freelancers
+<ul>
+<li>from all industries</li>
+<li>who want to further climate protection in their companies and </li>
+<li>that faster and more efficient climate protection measures are necessary</li>
+</ul>
+to sign this statement.
+<br>
+<p>
+By entering and confirming your name and email address, sign the #EntrepreneursForFuture Statement.</p>
+<br>
+<p>
+Your first and last name, company name and country (but not e-mail address or other data) are then published.</p>
+<b><br>
+
+<fieldset>
+<legend class=ml-2>Sign Statement</legend>
+
+<form class="ml-2" action="actions/a_create1.php" method= "post">
+    <table cellspacing= "0" cellpadding="0">
+        <tr>
+            <th>First Name*</th>
+            <td><input  type="text" name="firstname"  placeholder="Vorname" required></td>
+        </tr>  
+        <tr>
+            <th>Last Name*</th>
+            <td><input  type="text" name="lastname"  placeholder="Nachname" required></td>
+        </tr>   
+        <!-- <tr>
+            <th>Name</th>
+            <td><input  type="text" name="name"  placeholder="Name" required></td>
+        </tr>    -->
+        <tr>
+            <th>Email*</th>
+            <td><input type="text" name="email" placeholder="Email" required></td>
+        </tr>   
+        <tr>
+            <th>Company*</th>
+            <td><input  type="text" name= "company" placeholder="Unternehmen" required></td>
+        </tr>
+        <tr>
+            <th>Job Title*</th>
+		    <td>
+			<select name="status" required>
+				<option value="Inhaberin/Inhaber">Owner</option>
+				<option value="Gesellschafterin/Gesellschafter">Stakeholder</option>
+                <option value="Geschäftsführerin/Geschäftsführer">Managing Director / CEO</option>
+                <option value="Prokuristin/Prokurist">Authorized Representative</option>
+			</select>
+		</td>
+        </tr> 
+        <tr>
+            <th>Website*</th>
+            <td><input  type="text" name= "website" placeholder="Website, z.B. https://entrepreneurs4future.de" required></td>
+        </tr>  
+        <tr>
+            <th>City*</th>
+            <td><input type="text" name="city" placeholder="Stadt/Ort, z.B. Wien" required></td>
+        </tr>
+        <tr>
+            <th>Country*</th>
+            <td><input type="text" name="country" placeholder="Land, z.B. Österreich" required></td>
+        </tr>
+            <td><button class="btn btn-primary mt-4" type ="submit">SIGN NOW</button></td>
+        </tr>
+    </table>
+</form>
+
+</fieldset>
+</div>
 
 </div>
 <br><hr>

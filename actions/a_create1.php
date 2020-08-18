@@ -5,9 +5,9 @@ require_once '../dbconnect.php';
 require_once 'header.php';
 // require_once '../templates/header.php';
 
-if ( isset($_SESSION['user' ])!="" ) {
-    require_once '../templates/admin.php';
-   }
+// if ( isset($_SESSION['user' ])!="" ) {
+//     require_once '../templates/admin.php';
+//    }
 
 require_once '../templates/nav.php';  
 ?>

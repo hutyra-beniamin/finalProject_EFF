@@ -40,6 +40,8 @@ Wenn wir jetzt handeln, ist eine geregelte Dekarbonisierung der Wirtschaft mögl
 #EntrepreneursForFuture
 
 </p>
+</div>
+</div>
 
 <div class="container container-fluid" id="1">
 <br>
@@ -57,66 +59,62 @@ Indem Sie Namen und E-Mail-Adresse eingeben und bestätigen, unterzeichnen Sie d
 <p>
 Ihr Vor- und Nachname, der Firmenname und das Land (nicht aber E-Mail-Adresse oder sonstige Daten) werden anschließend veröffentlicht.</p>
 <b><br>
+
 <fieldset id="1">
 <h2>Stellungnahme unterzeichnen</h2>
 <br>
-<form class="form-group ml-2" action="actions/a_create1.php" method= "post">
-    <table cellspacing= "0" cellpadding="0">
-        <tr>
-            <th>Vorname*</th>
-            <td><input  type="text" name="firstname"  placeholder="Vorname" required></td>
-        </tr>  
-        <tr>
-            <th>Nachname*</th>
-            <td><input  type="text" name="lastname"  placeholder="Nachname" required></td>
-        </tr>   
-        <!-- <tr>
-            <th>Name</th>
-            <td><input  type="text" name="name"  placeholder="Name" required></td>
-        </tr>    -->
-        <tr>
-            <th>Email-Adresse*</th>
-            <td><input type="text" name="email" placeholder="Email" required></td>
-        </tr>   
-        <tr>
-            <th>Unternehmen*</th>
-            <td><input  type="text" name= "company" placeholder="Unternehmen" required></td>
-        </tr>
-        <tr>
-            <th>Funktion*</th>
-		    <td>
-			<select name="status" required>
-				<option value="Inhaberin/Inhaber">Inhaberin/Inhaber</option>
-				<option value="Gesellschafterin/Gesellschafter">Gesellschafterin/Gesellschafter</option>
-                <option value="Geschäftsführerin/Geschäftsführer">Geschäftsführerin/Geschäftsführer</option>
-                <option value="Prokuristin/Prokurist">Prokuristin/Prokurist</option>
-			</select>
-		</td>
-        </tr> 
-        <tr>
-            <th>Website*</th>
-            <td><input  type="text" name= "website" placeholder="Website, z.B. https://entrepreneurs4future.de" required></td>
-        </tr>  
-        <tr>
-            <th>Stadt/Ort*</th>
-            <td><input type="text" name="city" placeholder="Stadt/Ort, z.B. Wien" required></td>
-        </tr>
-        <tr>
-            <th>Land*</th>
-            <td><input type="text" name="country" placeholder="Land, z.B. Österreich" required></td>
-        </tr>
-            <td><button class="btn btn-primary mt-4" type ="submit">UNTERZEICHNEN</button></td>
-            <!-- <td ><a href= "admin.php"><button class="btn btn-dark mt-4" type="button">Back</button></a></td> -->
-        </tr>
-    </table>
-</form>
+<!-- Form starts -->
+<div class="container m-auto" id="form">
+        <form action="actions/a_create1.php" method= "post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Vorname*</label>
+                <input type="text" name="firstname"  class="form-control text-center" placeholder="Vorname" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nachname*</label>
+                <input type="text" name="lastname" class="form-control text-center" placeholder="Nachname" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email*</label>
+                <input type="text" class="form-control text-center" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Unternehmen*</label>
+                <input type="text" name= "company" class="form-control text-center" placeholder="Unternehmen" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Funktion</label>
+            <select name="status" required class="form-control text-center">
+              <option value="Inhaberin/Inhaber">Inhaberin/Inhaber</option>
+              <option value="Gesellschafterin/Gesellschafter">Gesellschafterin/Gesellschafter</option>
+              <option value="Geschäftsführerin/Geschäftsführer">Geschäftsführerin/Geschäftsführer</option>
+              <option value="Prokuristin/Prokurist">Prokuristin/Prokurist</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Website*</label>
+                <input type="text" name="url" class="form-control text-center" placeholder="Website, z.B. https://entrepreneurs4future.de" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Stadt/Ort*</label>
+                <input type="text" name="city" class="form-control text-center" placeholder="Stadt/Ort, z.B. Wien" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Land*</label>
+                <input type="text" name="country" class="form-control text-center" placeholder="Land, z.B. Österreich" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">UNTERZEICHNEN &#8594;</button>
+            </div>
+        </form>
+    </div>
+    <!-- Form ends -->
 
 </fieldset>
 </div>
-
 </div>
-<br><hr>
 
 <?php
 require_once 'templates/footer.php';
 ?>
+
