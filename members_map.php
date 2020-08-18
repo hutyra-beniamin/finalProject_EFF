@@ -4,121 +4,71 @@ session_start();
 require_once 'dbconnect.php';
 require_once 'templates/header.php';
 
-if ( isset($_SESSION['user' ])!="" ) {
+if (isset($_SESSION['user']) != "") {
     require_once 'templates/admin.php';
-   }
+}
 
-require_once 'templates/nav.php';  
-
-$sql = "SELECT * FROM `entrepreneurs`";
-$result = $connect->query($sql);
-
-if($result->num_rows > 0) {
-while ($row = $result->fetch_assoc()) {
-$address = $row["city"];
-
-}}
+require_once 'templates/nav.php';
 ?>
 
 <head>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-        #map {
-            height: 90%;
-            width: 95%;
-            /* margin: auto; */
-            margin-left: 1vw;
-            margin-right: 1vw;
-        }
-
-        /* Optional: Makes the sample page fill the window. */
-        /* html,
-        body {
-            height: 100%;
-            width: 85%;
-            margin: auto;
-            padding: 0;
-        } */
-    </style>
 </head>
 
 <body>
-
-    <input class="ml-4" type="text" id="address">
-    <button  value="address" onclick="getLocation()">Alle Mitgliedsunternehmen anzeigen</button>
-    <div id="map"></div>
-    
+    <div class="container mx-auto w-100 h-50" id="map">
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&sensor=false"></script>
     <script>
-        var geocoder;
-        var vienna = { lat: 48.255318, lng: 16.479655 };
-        // var pinpoints = [{ lt: 48.20849, lg: 16.37208 }, { lt: 48.147608, lg: 17.106294 }, { lt: 48.45455, lg: 14.37208 }];
-        // console.log(pinpoints.length);
+        let map;
+
         function initialize() {
             geocoder = new google.maps.Geocoder();
-            var mlocation = {
-                lat: 47.79941, 
-                lng: 13.04399
+            map = new google.maps.Map(document.getElementById('map'));
+            let addresses;
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    addresses = JSON.parse(this.responseText).map(entrepreneur => entrepreneur.city);
+                }
             };
-            var nlocation = {
-                lat: 48.20849,
-                lng: 15.37208
-            };
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: mlocation,
-                zoom: 7
+            xhttp.open("GET", "http://server01.time4tech.at:8080/final_project/get_json.php?table=entrepreneurs&distinct=city", false);
+            xhttp.send();
+            //sets north-east and south-west of map
+            let bounds = new google.maps.LatLngBounds(new google.maps.LatLng(46.250135, 9.081696),
+                new google.maps.LatLng(49.118814, 17.167633));
+            map.fitBounds(bounds);
+            //fixes zoom
+            let listener = google.maps.event.addListener(map, "idle", function() {
+                map.setZoom(map.getZoom() + 0.5);
+                google.maps.event.removeListener(listener);
             });
-
-            var pinpoint = new google.maps.Marker({
-                        position: vienna,
-                        map: map,
-                        icon: 'http://maps.google.com/mapfiles/kml/pal2/icon4.png'
-            });
-            /*for (i = 0; i < pinpoints.length; i++) {
-                console.log(i);
-                var pinpoint = new google.maps.Marker({
-                    position: { lat: pinpoints[i].lt, lng: pinpoints[i].lg },
-                    map: map
-                });
-            }*/
-        }
-            function getLocation() {
-                var address = document.getElementById('address').value;
-                console.log(address);
-                geocoder.geocode({ 'address': address }, function(results, status) {
-                    if (status == 'OK') {
-                        map.setCenter(results[0].geometry.location);
-                        var marker = new google.maps.Marker({
+            for (address of addresses) {
+                geocoder.geocode({
+                    'address': address
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        new google.maps.Marker({
                             map: map,
                             position: results[0].geometry.location,
                             icon: 'http://maps.google.com/mapfiles/kml/pal2/icon4.png'
                         });
-
-
-
-                        console.log(results);
+                    } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+                        wait = true;
+                        setTimeout("wait = true", 2000);
+                        //alert("OQL: " + status);
                     } else {
-                        console.table(results);
-                        alert('It was not possible to perform your request due to ' + status);
+                        alert("Geocode was not successful for the following reason: " + status);
                     }
-
                 })
-            };
-            /*var pinpoint = new google.maps.Marker({
-              position: mlocation,
-              map: map
-            });
-            var pinpoint2 = new google.maps.Marker({
-                position: nlocation,
-                map: map
-              });*/
-                 
+            }
+        }
+        //google.maps.event.addDomListener(window, 'resize', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initialize"
-        async defer></script>
 
-<br><hr>
+    <br>
+    <hr>
 
-<?php
-require_once 'templates/footer.php';
-?>
+    <?php
+    require_once 'templates/footer.php';
+    ?>
