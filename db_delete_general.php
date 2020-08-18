@@ -1,5 +1,5 @@
 <?php
-require_once './db_connect.php';
+require_once './dbconnect.php';
 if (isset($_POST['table'])) {
   $table = $_POST['table'];
   unset($_POST['table']);
@@ -20,11 +20,11 @@ if (isset($_POST['delete_value'])) {
 }
 $sql = "DELETE FROM `$table` WHERE `$delete_key` = '$delete_value'";
 if ($connect->query($sql) === true) {
-  echo  "Successfully deleted!";
+  header('Location: ' . $_SERVER["HTTP_REFERER"]);
 } elseif ($connect->errno == 1451) {
-  echo "Error: $delete_key is connected to a foreign key of another table!";
+  die("Error: $delete_key is connected to a foreign key of another table!");
 } else {
-  echo "Error while deleting record : " . $connect->error;
+  die("Error while deleting record : " . $connect->error);
 }
 $connect->close();
 ?>

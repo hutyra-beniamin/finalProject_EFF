@@ -1,5 +1,5 @@
 <?php
-require_once './db_connect.php';
+require_once './dbconnect.php';
 if (isset($_POST['table'])) {
   $table = $_POST['table'];
   unset($_POST['table']);
