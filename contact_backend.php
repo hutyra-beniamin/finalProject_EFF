@@ -46,11 +46,13 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $keys = join(", ", array_keys($_POST));
 $values = join(", ", array_map(fn($v) => "'" . str_replace("'", "\'", $v) . "'", array_values($_POST))); //escapes quotation marks and adds prefix and suffix quotation marks
 $sql = "INSERT INTO `contact_us` ($keys) VALUES ($values);";
-if ($connect->query($sql) === true) {
-  echo  "Successfully inserted!";
-} else {
-  echo "Error while updating record : " . $connect->error;
-  exit;
+if (!$connect->query($sql) === true) {
+  header('Content-Type: application/json; charset=UTF-8');
+  die(json_encode([
+    'message' => 'Error while updating record : ' . $connect->error,
+    'error' => true
+  ]));
+  die("Error while updating record : " . $connect->error);
 }
 $connect->close();
 
@@ -76,14 +78,5 @@ $mail->isHTML(true);
 
 $placeholders = ['%name%', '%surname%', '%message%', '%email%'];
 $mail->Body = str_replace($placeholders, $inputs, file_get_contents('mail/MailBody.html'));
-if (!$mail->send()) {
-  header('Content-Type: application/json; charset=UTF-8');
-  die(json_encode([
-    'message' => 'Die E-Mail mit dem Bestätigungslink konnte nicht gesendet werden!',
-    'error' => true
-  ]));
-} else {
-  die(json_encode([
-    'message' => 'Deine Aktivierungs-E-Mail wurde erfolgreich an ' . $email . ' gesendet. Bitte folge den Anweisungen in der E-Mail um deine Anmeldung abzuschließen.',
-  ]));
-}
+$mail->send();
+header('Location: ./contact.php');
