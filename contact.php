@@ -13,7 +13,7 @@ require_once 'templates/nav.php';
 <div class= "container container-fluid">
 <h1>Contact</h1>
 
-<form action="contact_backend.php" method="POST">
+<form action="contact_backend.php" method="post">
   <div class="form-group">
     <label for="name">Vorname</label>
     <input type="text" class="form-control" name="name" id="name">
@@ -27,10 +27,10 @@ require_once 'templates/nav.php';
     <textarea class="form-control" name="message" id="message" rows="10"></textarea>
   </div>
   <div class="form-group">
-    <label for="email">E-Mail</label>
+    <label for="email">Email</label>
     <input type="text" class="form-control" id="email" name="email">
   </div>
-  <button type="submit" class="btn btn-outline-secondary">Abschicken</button>
+  <input type="submit" class="btn btn-outline-secondary">
 </form>
 
 </div>

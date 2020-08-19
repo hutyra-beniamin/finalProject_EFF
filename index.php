@@ -14,36 +14,41 @@ require_once 'templates/nav.php';
 
     <!--Hero section starts-->
     <div class="parallax"></div>
-    <div class="container-fluid text-center" id="hero_text_bg">
-        <div id="hero_text">
-        <h1>Entrepreneurs For Future</h1>
-  <hr class="my-4">
-  <h2>WIRTSCHAFT WILL MEHR KLIMASCHUTZ</h2>
-  <!-- <a class="btn btn-primary btn-lg" role="button" href="unterzeichnen.php?#1" >Jetzt unterzeichnen</a> -->
-  </div>
+    <div class="jumbotron jumbotron-fluid text-light text-center" id="hero_text">
+        <div class="container">
+        <h1 class="display-4">Entrepreneurs For Future</h1>
+        <hr class="my-4">
+        <h2 class="display-5">Wirtschaft will mehr Klimaschutz</h2>
         </div>
     </div>
-    <!--Hero section ends-->   
+    <!--Hero section ends-->
+<!-- About section starts -->
+<br>
 
- <!-- About section starts -->
- <br>
- <div class="container container-fluid ">
-<p>
-Wir sind Unternehmerinnen und Unternehmer, die heute schon Klimaschutz voranbringen bzw. sich dafür einsetzen, dass die Wirtschaft mit innovativen Produkten, Technologien, Dienstleistungen und Geschäftsmodellen einen schnelleren Klimaschutz voranbringt.
-</p>
-<p>
-Unsere Initiative steht inzwischen für mehr als 180.000 Arbeitsplätze und mehr als 30 Mrd. EUR Umsatz.
-</p>
-Wir laden aktive Unternehmerinnen, Unternehmer, Gründerinnen, Gründer und Selbständige
-<ul>
-<li>aus allen Branchen,</li>
-<li>die heute schon Klimaschutz mit ihren Unternehmungen voranbringen oder</li>
-<li>die davon überzeugt sind, dass schnellere und bessere Klimaschutzmaßnahmen nötig sind</li>
-</ul>
-ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</p>
+<div class="container" id="about_text">
+
+    <h4>Wir sind Unternehmerinnen und Unternehmer, die heute schon Klimaschutz voranbringen bzw. sich dafür einsetzen, dass die Wirtschaft mit innovativen Produkten, Technologien, Dienstleistungen und Geschäftsmodellen einen schnelleren Klimaschutz voranbringt.
+  </h4>
+  <br>
+    <h4 class="text-center"><em>Unsere Initiative steht inzwischen für mehr als 180.000 Arbeitsplätze und mehr als 30 Mrd. EUR Umsatz.</em></h4>
+    <br>
+    <h3>Wir laden</h3>
+    <br>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="container mr-2 pr-1"><b>aktive Unternehmerinnen, Unternehmer, Gründerinnen, Gründer und Selbständige aus allen Branchen, die heute schon Klimaschutz mit ihren Unternehmungen voranbringen oder die davon überzeugt sind, dass schnellere und bessere Klimaschutzmaßnahmen
+            nötig sind</b>
+
+        </div>
+        <div class="container ml-3" id="about_img">
+            <img src="img/ecology.png" alt="">
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</h3>
 </div>
-</div>
-<br><hr>
+
+<br>
 <!-- About section ends-->
 
  <!-- Signed section starts-->
@@ -63,7 +68,7 @@ ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</p>
         <!-- Sign section starts-->
         <div class="container-fluid" id="sign">
         <div class="container d-flex justify-content-around">
-            <div class="text-white">
+            <div class="text-white text-center">
                 <strong>
             Werden auch Sie Teil der Initiative #EntrepreneursForFuture und unterzeichnen Sie die Stellungnahme:
         </strong>
@@ -108,16 +113,31 @@ ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</p>
     </div>
     <!-- Blog section ends-->
 
-    <!-- Social media section starts-->
-    <div class="container-fluid d-flex align-items-center justify-content-center" id="social">
-        <div>
-            <h3><em><strong>Folgen Sie uns in den Sozialen Medien!</strong></em></h3>
+<!-- Social media section starts-->
+
+
+<div class="container-fluid" id="social">
+        <div class="container text-center text-white">
+            <h3>Folgen Sie uns auf Social media</h3>
         </div>
-        <div>
-            <a href="https://www.facebook.com/E4FAustria/" target="_blank"><img src="img/social_media.png" alt="facebook"></a>
+        <br>
+        <div class="container d-flex justify-content-around flex-wrap">
+            <div class="facebook">
+                <a href="https://www.facebook.com/" class="fa fa-facebook p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com/?lang=de" class="fa fa-twitter p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/?hl=de" class="fa fa-instagram p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+            </div>
+            <div class="pintrest">
+                <a href="https://www.pinterest.at/" class="fa fa-pinterest p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+            </div>
         </div>
     </div>
     <!-- Social media section ends-->
+
     <!-- Contact section starts-->
     <div class="container-fluid text-center" id="contact">
         <div class="container">
@@ -127,20 +147,48 @@ ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</p>
             <br>
             <br>
             <div>
-                <form>
-                    <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
-                        <div class="col-sm-10">
-                            <input type="name" class="form-control" id="colFormLabel" placeholder="Name">
+             
+            <!-- <div class="form-group">
+    <label for="message">Nachricht</label>
+    <textarea class="form-control" name="message" id="message" rows="10"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" name="email">
+  </div> -->
+  
+            <form class="d-flex flex-column w-80 align-content-center" action="contact_backend.php" method="post">
+                    <div class="form-group">
+
+<!-- <div class="form-group">
+    <label for="name">Vorname</label>
+    <input type="text" class="form-control" name="name" id="name">
+  </div>
+  <div class="form-group">
+    <label for="surname">Nachname</label>
+    <input type="text" class="form-control" name="surname" id="surname">
+  </div> -->
+
+                        <div class="mx-auto">
+                        <div class="form-group ">
+                            <input type="name" class="form-control text-center" name="name" id="name colFormLabel" placeholder="Vorname">
+                        </div>
+                        <div class="form-group ">
+                    <input type="name" class="form-control text-center" name="surname" id="surname colFormLabel" placeholder="Nachname">
+                        </div>
+                        <div class="form-group ">
+                    <textarea class="form-control text-center" name="message" id="message colFormLabel" placeholder="Message" rows="10"></textarea>
+                   </div>
+                        <!-- <div>
+                            <input type="text" class="form-control text-center" id="colFormLabel" placeholder="Message">
+                        </div> -->
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <input type="email" class="form-control text-center" name="email" id=" email colFormLabel" placeholder="E-mail">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="colFormLabel" placeholder="E-mail">
-                        </div>
-                    </div>
-                    <div><a href="#" class="btn btn-primary btn-lg">Submit</a></div>
+                    <input type="submit" class="btn btn-outline-primary"></div>
                 </form>
             </div>
         </div>
@@ -155,9 +203,20 @@ ein, die Stellungnahme von #EntrepreneursForFuture zu unterschreiben.</p>
         </div>
 
         <div>
-            <p>Folgen Sie uns auf:</p>
-            <a href="https://www.facebook.com/E4FAustria/" target="_blank">Facebook</a>
-        </div>
+        <p>Folgen Sie uns auf:</p>
+            <div class="container d-flex">
+                <div>
+                    <a href="https://www.facebook.com/E4FAustria/" class="fa fa-facebook p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/?lang=de" class="fa fa-twitter p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/?hl=de" class="fa fa-instagram p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                </div>
+                <div>
+                    <a href="https://www.pinterest.at/" class="fa fa-pinterest p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                </div>
     </div>
     <!-- Footer section ends-->
 

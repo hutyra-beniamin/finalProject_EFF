@@ -11,6 +11,7 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
+<div class= "col-sm-12 col-md-10">
 <h1>Stellungnahme von Unternehmerinnen & Unternehmern zu den Protesten für mehr Klimaschutz (#EntrepreneursForFuture)</h1>
 
 <div>
@@ -43,7 +44,7 @@ Wenn wir jetzt handeln, ist eine geregelte Dekarbonisierung der Wirtschaft mögl
 #EntrepreneursForFuture
 
 </p>
-
+</div>
 </div>
 <br><hr>
 
