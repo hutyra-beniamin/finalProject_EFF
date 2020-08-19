@@ -23,10 +23,9 @@ foreach ($_POST as $key => $value) {
 }
 $sql = "UPDATE `$table` SET " . join(", ", $set_clause) . " WHERE $update_key = '$update_value'";
 if ($connect->query($sql) === true) {
-  echo  "Successfully updated!";
+  header('Location: ' . $_SERVER["HTTP_REFERER"]);
 } else {
-  echo "Error while updating record : " . $connect->error;
-  exit;
+  die("Error while updating record : " . $connect->error);
 }
 $connect->close();
 ?>

@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="db_insert_general.php" method="POST">
+      <form action="db_insert_general.php" method="POST" id="event-form">
         <input type="hidden" class="form-control" name="table" id="table" value="events">
         <div class="modal-body">
           <div class="form-group">

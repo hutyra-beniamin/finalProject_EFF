@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+require_once 'dbconnect.php';
 require_once 'templates/header.php';
 
 if (isset($_SESSION['user']) != "") {
@@ -44,7 +45,7 @@ require_once 'templates/nav.php';
                         <td>$date $time</td>
                         <td>$description</td>
                         <td>$place</td>";
-                    if (isset($_SESSION['user']) != "") echo '<td><button class="btn btn-outline-danger" type="submit" form="delete" name="delete_value" value="' . $id . '">Löschen</button></td>';
+                    if (isset($_SESSION['user']) != "") echo '<td><button class="btn btn-outline-secondary update" type="button" data-id="' . $id . '">Ändern</button><button class="btn btn-outline-danger ml-2" type="submit" form="delete" name="delete_value" value="' . $id . '">Löschen</button></td>';
                     echo "</tr>";
                 }
             } ?>
@@ -57,7 +58,7 @@ require_once 'templates/nav.php';
     <input type="hidden" name="table" value="events">
     <input type="hidden" name="delete_key" value="id">
 </form>
-
 <?php
 require_once 'templates/footer.php';
+require 'templates/update_event.php';
 ?>
