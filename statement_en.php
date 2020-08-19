@@ -50,6 +50,7 @@ If we act now, an orderly decarbonisation of our economy will be possible. This 
 </p>
 
 <div class= "container container-fluid">
+<div class= "col-sm-12 col-md-10">
 <b>We invite active entrepreneurs, founders and freelancers
 <ul>
 <li>from all industries</li>
@@ -64,6 +65,8 @@ By entering and confirming your name and email address, sign the #EntrepreneursF
 <p>
 Your first and last name, company name and country (but not e-mail address or other data) are then published.</p>
 <b><br>
+</div>
+</div>
 
 <fieldset>
 <legend class=ml-2>Sign Statement</legend>

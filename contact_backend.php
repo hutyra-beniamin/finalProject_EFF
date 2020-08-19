@@ -1,8 +1,8 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 
-require_once './dbconnect.php';
+echo "hi";
+require_once 'dbconnect.php';
 require "./mail/PHPMailer.php";
 require "./mail/SMTP.php";
 
@@ -61,6 +61,7 @@ $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 $mail->isSMTP();
+// $mail->SMTPDebug = 1;
 $mail->Host = 'mail.elke.codefactory.live';
 $mail->SMTPAuth = true;
 $mail->Username = 'noreply@elke.codefactory.live';

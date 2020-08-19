@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+require_once 'dbconnect.php';
 require_once 'templates/header.php';
 
 if (isset($_SESSION['user']) != "") {
@@ -22,30 +23,54 @@ $xml = simplexml_load_string($response);
     }
     ?>
     <h1>Sustainable Business News</h1>
-    <div class="row mt-4">
+    <div class="row row-cols-2 mt-4">
+        <div class="col">
+            <?php
+            $sql = "SELECT * FROM `posts`";
+            $result = $connect->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $id = $row["id"];
+                    $title = $row["title"];
+                    $post = $row["post"];
+                    $user = $row["user"];
+                    $timestamp = $row["timestamp"];
+                    echo "<div class='card px-4'>
+                        <div class='card-body'>
+                        <a href='blogpost.php?id=$id'><h5 class='card-title'>$title</h5></a>
+                        <p>" . date("D, d M Y H:i:s", strtotime($timestamp)) . " GMT</p>
+                        <p>" . (strlen($post) > 50 ? substr($post, 0, 50) . "..." : $post) . "</p>";
+                    if (isset($_SESSION['user']) != "") echo '<button class="btn btn-outline-secondary update" type="button" data-id="' . $id . '">Ändern</button><button class="btn btn-outline-danger ml-2" type="submit" form="delete" name="delete_value" value="' . $id . '">Löschen</button>';
+                    echo "</div></div>";
+                }
+            }
+            ?>
+        </div>
+        <div class="col">
+            <?php
+            $i = 0;
+            foreach ($xml->channel->item as $item) {
+                echo '<div class="card px-4">
+                    <div class="card-body">
+                        <a href="blogpost.php?id=' . $i . '"><h5 class="card-title">' . $item->title . '</h5></a>
+                        <p>' . $item->pubDate . '</p>
+                        <p>' . $item->description . '</p>
+                    </div>
+                </div>';
+                $i++;
+                if ($i == 5) break;
+            }
+            ?>
+        </div>
 
-        <?php
-        $i = 0;
-        foreach ($xml->channel->item as $item) {
-            echo '<div class="col-sm-12 col-md-6 col-lg-34 pl-2 my-3">
-<div class="card px-4">
-<div class="card-body">
-
-<a href="blogpost.php?id=' . $i . '"<h5 class="card-title">' . $item->title . '</h5></a>
-<p>' . $item->pubDate . '</p>
-<p>' . $item->description . '</p>
-
-</div>
-</div>
-</div>';
-            $i++;
-            if ($i == 5) break;
-        }
-        ?>
 
     </div>
 </div>
-
+<form action="./db_delete_general.php" method="POST" id="delete">
+    <input type="hidden" name="table" value="posts">
+    <input type="hidden" name="delete_key" value="id">
+</form>
 <?php
-require_once 'templates/f_footer.php';
+require_once 'templates/footer.php';
+require 'templates/update_post.php';
 ?>
