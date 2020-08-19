@@ -12,8 +12,10 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
+<div class ="col-sm-12 col-md-10">
+
 <h1>Unternehmerinnen & Unternehmer</h1>
-<p>die sich als EntrepreneursForFuture engagieren und die Stellungnahme unterzeichnet haben</p>
+<p>die sich als Entrepreneurs For Future engagieren und die Stellungnahme unterzeichnet haben</p>
 <br>
 
 <?php
@@ -55,6 +57,7 @@ echo "<tr>
         
         </tbody>
     </table>
+</div>
 </div>
 
 <br><hr>

@@ -1,11 +1,13 @@
-<div class= "container container-fluid">
-<b>Wir laden aktive Unternehmerinnen, Unternehmer, Gründerinnen, Gründer und Selbständige
+<div class="container container-fluid">
+<div class= "col-sm-12 col-md-10">
+<br>
+<h3>Wir laden aktive Unternehmerinnen, Unternehmer, Gründerinnen, Gründer und Selbständige</h3>
 <ul>
 <li>aus allen Branchen,</li>
 <li>die heute schon Klimaschutz mit ihren Unternehmungen voranbringen oder</li>
 <li>die davon überzeugt sind, dass schnellere und bessere Klimaschutzmaßnahmen nötig sind</li>
 </ul>
-ein, die obenstehende Stellungnahme zu unterschreiben.
+<h3>ein, die obenstehende Stellungnahme zu unterschreiben.</h3>
 <br>
 <p>
 Indem Sie Namen und E-Mail-Adresse eingeben und bestätigen, unterzeichnen Sie die #EntrepreneursForFuture-Stellungnahme.</p>
@@ -14,11 +16,17 @@ Indem Sie Namen und E-Mail-Adresse eingeben und bestätigen, unterzeichnen Sie d
 Ihr Vor- und Nachname, der Firmenname und das Land (nicht aber E-Mail-Adresse oder sonstige Daten) werden anschließend veröffentlicht.</p>
 <b><br>
 
-<fieldset id="1">
+</div>
+</div>
+
+<div class="container container-fluid">
+<div class= "col-sm-12 col-md-10">
+
+<fieldset>
 <h2>Stellungnahme unterzeichnen</h2>
 <br>
 <!-- Form starts -->
-<div class="container m-auto" id="form">
+<div class="container " id="form">
         <form action="actions/a_create1.php" method= "post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Vorname*</label>
@@ -66,6 +74,6 @@ Ihr Vor- und Nachname, der Firmenname und das Land (nicht aber E-Mail-Adresse od
 
 </fieldset>
 </div>
-
 </div>
+
 <br><hr>

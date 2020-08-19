@@ -63,7 +63,8 @@ if( isset($_POST['btn-login']) ) {
    <form method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete= "off">
  
    <div class="container container-fluid">  
-            <h2>Login</h2 >
+   <div class="col-sm-12 md-8 ml-4">
+            <h2 class="">Login</h2 >
             <hr />
            
             <?php
@@ -73,6 +74,7 @@ echo  $errMSG; ?>
                <?php
   }
   ?> 
+  
             <input  type="email" name="email"  class="form-control" placeholder= "Your Email" value="<?php echo $email; ?>"  maxlength="40" />
        
             <span class="text-danger"><?php  echo $emailError; ?></span >
@@ -87,7 +89,7 @@ echo  $errMSG; ?>
          
             <hr />
  
-            <a  href="register.php">Register Here...</a>    
+            <a class="text-white" href="register.php">Register Here...</a>    
    </form>
    </div>
    </div>

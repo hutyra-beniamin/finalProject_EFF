@@ -11,15 +11,17 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
-<h1>Entrepreneurs for Future</h1>
+<div class="col-sm-12 md-8">
+<h1>Entrepreneurs For Future</h1>
+</div>
 
+<div class= "container container-fluid">
 <div class="row">
-
 <div class="col-sm-12 col-md-7 mt-4">
        <div class="card">
         <!-- <img src="././img/streik_2910.jpg" class="card-img-top" alt="WKO Streik"> -->
         <br>
-        <h2>Über uns</h2>
+        <h3 class="pl-2">Über uns</h3>
             <div class="card-body">
             <p>
             Wir sind Unternehmerinnen und Unternehmer, die heute schon Klimaschutz voranbringen bzw. sich dafür einsetzen, dass die Wirtschaft mit innovativen Produkten, Technologien, Dienstleistungen und Geschäftsmodellen einen schnelleren Klimaschutz voranbringt.
@@ -41,7 +43,7 @@ require_once 'templates/nav.php';
         <div class="card offset-sm-0 offset-md-2">
         <img src="././img/there is no wirtschaftsstandort.JPG" class="card-img-top" alt="Wirtschaftsstandort">
         <br>
-        <h2>Partner-Organisationen</h2>
+        <h3 class=" pl-2">Partner-Organisationen</h3>
             <div class="card-body">
                 <ul>
                     <li><a href="https://entrepreneurs4future.de/" target="_blank">Entrepreneurs For Future Deutschland</a></li>
@@ -55,6 +57,7 @@ require_once 'templates/nav.php';
         </div>
 
     </div>
+</div>
 </div>
 
 

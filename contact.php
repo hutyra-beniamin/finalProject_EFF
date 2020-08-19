@@ -11,7 +11,8 @@ require_once 'templates/nav.php';
 ?>
 
 <div class= "container container-fluid">
-<h1>Contact</h1>
+<div class="col-sm-12 md-8">
+<h1>Kontakt</h1>
 
 <form action="contact_backend.php" method="post">
   <div class="form-group">
@@ -33,6 +34,7 @@ require_once 'templates/nav.php';
   <input type="submit" class="btn btn-outline-secondary">
 </form>
 
+</div>
 </div>
 <br><hr>
 

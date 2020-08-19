@@ -1,4 +1,5 @@
 <div class="container container-fluid">
+  <div class ="col sm-12 md-10">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <a href="index.php"><img src="img/logo-entrepreneursforfuture-head_top.png"></a>
@@ -26,7 +27,7 @@
         <a class="nav-link" href="members_map.php">Karte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="blog.php">News & Tips</a>
+        <a class="nav-link" href="blog.php">News</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="termine.php">Termine</a>
@@ -34,15 +35,8 @@
       <li class="nav-item">
         <a class="nav-link" href="contact.php">Kontakt</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="statement_at.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Stellungnahme
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="statement_at.php">Stellungnahme AT </a>
-            <a class="dropdown-item" href="statement_de.php">Stellungnahme DE </a>
-            <a class="dropdown-item" href="statement_en.php">Statement EN </a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="statement_at.php">Stellungnahme</a>
       </li>
 			<li>
 				<button class="btn btn-md bg-transparent btnli"><a href="unterzeichnen.php?#1">UNTERZEICHNEN</a></button>
@@ -50,15 +44,16 @@
     </ul>
     <ul>
 			<li class="list-unstyled">
-				<a href="login.php">Admin</a>
+				<a class="text-white" href="login.php">Admin</a>
       </li>
     </ul>
   </div>
 </nav>
 </div>
+</div>
 
 <hr class="mx-4">
 
-<!-- 
 
-<body> -->
+
+<body>

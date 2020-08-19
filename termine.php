@@ -16,7 +16,10 @@ require_once 'templates/nav.php';
         include 'templates/add_event.php';
     }
     ?>
-    <h1>Termine</h1>
+
+<div class= "container container-fluid">
+<div class ="col-sm-12 col-md-10">
+    <h1 class="ml-4">Termine</h1>
     <table class="table table-bordered mt-4" cellspacing="0" cellpadding="0">
         <thead>
             <tr class="pb-4">
@@ -51,6 +54,8 @@ require_once 'templates/nav.php';
             } ?>
         </tbody>
     </table>
+</div>
+</div>
 </div>
 <br>
 <hr>

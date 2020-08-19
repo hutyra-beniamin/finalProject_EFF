@@ -16,7 +16,7 @@ require_once 'templates/nav.php';
 
 
 <?php
-$sql = "SELECT * FROM `entrepreneurs`";
+$sql = "SELECT * FROM `entrepreneure`";
 $result = $connect->query($sql);
 ?>
 
@@ -34,7 +34,7 @@ $result = $connect->query($sql);
 
 
 <?php
-$sql = "SELECT * FROM `entrepreneurs`";
+$sql = "SELECT * FROM `entrepreneure`";
 $result = $connect->query($sql);
 if($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {

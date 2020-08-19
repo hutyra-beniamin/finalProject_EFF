@@ -80,7 +80,7 @@ require_once 'templates/nav.php';
         </strong>
             </div>
             <div>
-                <a href="#" class="btn btn-primary btn-lg" id="sign_button">Jetzt unterzeichnen!</a>
+                <a href="unterzeichnen.php?#1" class="btn btn-primary btn-lg" id="sign_button">Jetzt unterzeichnen!</a>
             </div>
         </div>
     </div>
@@ -124,21 +124,21 @@ require_once 'templates/nav.php';
 
 <div class="container-fluid" id="social">
         <div class="container text-center text-white">
-            <h3>Folgen Sie uns auf Social media</h3>
+            <h3>Folgen Sie uns auf Social Media</h3>
         </div>
         <br>
         <div class="container d-flex justify-content-around flex-wrap">
             <div class="facebook">
-                <a href="https://www.facebook.com/" class="fa fa-facebook p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                <a href="https://www.facebook.com/E4FAustria" target="_blank" class="fa fa-facebook p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
             </div>
             <div class="twitter">
-                <a href="https://twitter.com/?lang=de" class="fa fa-twitter p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                <a href="https://twitter.com/eff_future" target="_blank" class="fa fa-twitter p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
             </div>
             <div class="instagram">
-                <a href="https://www.instagram.com/?hl=de" class="fa fa-instagram p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                <a href="https://www.instagram.com/entrepreneursforfuture" target="_blank"class="fa fa-instagram p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
             </div>
             <div class="pintrest">
-                <a href="https://www.pinterest.at/" class="fa fa-pinterest p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
+                <a href="https://www.linkedin.com/company/entrepreneurs-for-future" target="_blank"class="fa fa-linkedin p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
             </div>
         </div>
     </div>
@@ -202,7 +202,7 @@ require_once 'templates/nav.php';
     <!-- Contact section ends-->
 
         <!--Footer section starts-->
-        <div class="container-fluid d-flex align-content-center justify-content-around text-white" id="footer">
+        <!-- <div class="container-fluid d-flex align-content-center justify-content-around text-white" id="footer">
         <div>
             <p>Copyright @ Entrepreneurs For Future Austria, 2020</p>
             <p> <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
@@ -223,7 +223,7 @@ require_once 'templates/nav.php';
                 <div>
                     <a href="https://www.pinterest.at/" class="fa fa-pinterest p-2 text-white" style="font-size: 2vw; text-decoration:none;"></a>
                 </div>
-    </div>
+    </div> -->
     <!-- Footer section ends-->
 
 

@@ -22,9 +22,9 @@ $xml = simplexml_load_string($response);
         include 'templates/add_post.php';
     }
     ?>
-    <h1>Sustainable Business News</h1>
-    <div class="row row-cols-2 mt-4">
-        <div class="col">
+    <h1 class="ml-4">Sustainable Business News</h1>
+    <div class="row mt-4">
+        <div class="col-sm-12 col-md-6">
             <?php
             $sql = "SELECT * FROM `posts`";
             $result = $connect->query($sql);
@@ -37,16 +37,16 @@ $xml = simplexml_load_string($response);
                     $timestamp = $row["timestamp"];
                     echo "<div class='card px-4'>
                         <div class='card-body'>
-                        <h5 class='card-title'>$title</h5>
-                        <p>" . strftime("%a, %d.%m.%Y", strtotime($timestamp)) . "</p>
-                        <p>" . $post . "</p>";
+                        <a href='blogpost.php?id=$id'><h5 class='card-title'>$title</h5></a>
+                        <p>" . date("D, d M Y H:i:s", strtotime($timestamp)) . " GMT</p>
+                        <p>" . (strlen($post) > 50 ? substr($post, 0, 50) . "..." : $post) . "</p>";
                     if (isset($_SESSION['user']) != "") echo '<button class="btn btn-outline-secondary update" type="button" data-id="' . $id . '">Ändern</button><button class="btn btn-outline-danger ml-2" type="submit" form="delete" name="delete_value" value="' . $id . '">Löschen</button>';
                     echo "</div></div>";
                 }
             }
             ?>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6">
             <?php
             $i = 0;
             foreach ($xml->channel->item as $item) {
@@ -70,6 +70,9 @@ $xml = simplexml_load_string($response);
     <input type="hidden" name="table" value="posts">
     <input type="hidden" name="delete_key" value="id">
 </form>
+
+<br><hr>
+
 <?php
 require_once 'templates/footer.php';
 require 'templates/update_post.php';

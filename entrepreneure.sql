@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 17. Aug 2020 um 22:35
+-- Erstellungszeit: 19. Aug 2020 um 17:13
 -- Server-Version: 10.4.13-MariaDB
 -- PHP-Version: 7.4.7
 
@@ -60,7 +60,8 @@ INSERT INTO `entrepreneure` (`id`, `firstname`, `lastname`, `email`, `company`, 
 (33, 'Harald', 'Frassine', 'Email', 'Marktforschung', 'Inhaberin/Inhaber', 'https://www.xing.com/profile/HaraldSilvio_Frassine/cv', 'Wien', 'Österreich'),
 (34, 'Stefan', 'Yazzie Herbert', 'Email', 'House of Bandits', 'Inhaberin/Inhaber', 'http://www.houseofbandits.at/', 'Wien', 'Österreich'),
 (35, 'Michael', 'Rausch-Schott', 'Email', 'Fotografie Michael Rausch-Schott', 'Inhaberin/Inhaber', 'http://www.rausch-schott.at/', 'Wien', 'Österreich'),
-(36, 'Elke', 'Mitterdorfer', 'elke@surprisesurprise.at', 'surprise, surprise!', 'Inhaberin/Inhaber', 'http://www.surprisesurprise.at/', 'Wien', 'Österreich');
+(36, 'Elke', 'Mitterdorfer', 'elke@surprisesurprise.at', 'surprise, surprise!', 'Inhaberin/Inhaber', 'http://www.surprisesurprise.at/', 'Wien', 'Österreich'),
+(42, 'Elke', 'Mitterdorfer', 'elke.mitterdorfer@chello.at', 'surprise, surprise!', 'Inhaberin/Inhaber', '', 'Wien', 'Österreich');
 
 --
 -- Indizes der exportierten Tabellen
@@ -80,7 +81,7 @@ ALTER TABLE `entrepreneure`
 -- AUTO_INCREMENT für Tabelle `entrepreneure`
 --
 ALTER TABLE `entrepreneure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

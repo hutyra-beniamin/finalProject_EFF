@@ -10,9 +10,13 @@ if ( isset($_SESSION['user' ])!="" ) {
 require_once 'templates/nav.php';  
 ?>
 
+<!-- <head>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+</head> -->
+
 <div class= "container container-fluid">
 <div class= "col-sm-12 col-md-10">
-<h1>Stellungnahme von Unternehmerinnen & Unternehmern aus Österreich zu den Protesten für mehr Klimaschutz (#EntrepreneursForFuture)</h1>
+<h2 >Stellungnahme von Unternehmerinnen & Unternehmern aus Österreich zu den Protesten für mehr Klimaschutz</h2>
 
 <div>
 <p>
