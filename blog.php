@@ -38,7 +38,7 @@ $xml = simplexml_load_string($response);
                     echo "<div class='card px-4'>
                         <div class='card-body'>
                         <a href='blogpost.php?id=$id'><h5 class='card-title'>$title</h5></a>
-                        <p>" . date("D, d M Y H:i:s", strtotime($timestamp)) . " GMT</p>
+                        <p>" . strftime("%a, %d.%m.%Y", strtotime($timestamp)) . "</p>
                         <p>" . (strlen($post) > 50 ? substr($post, 0, 50) . "..." : $post) . "</p>";
                     if (isset($_SESSION['user']) != "") echo '<button class="btn btn-outline-secondary update" type="button" data-id="' . $id . '">Ändern</button><button class="btn btn-outline-danger ml-2" type="submit" form="delete" name="delete_value" value="' . $id . '">Löschen</button>';
                     echo "</div></div>";
