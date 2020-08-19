@@ -20,11 +20,10 @@ require_once 'templates/nav.php';
 <div class="jumbotron parallax1 mb-0">
 </div>
 <div class="jumbotron">
-  <h1 class="display-4">Entrepreneurs For Future</h1>
+  <h1>Entrepreneurs For Future</h1>
   <hr class="my-4">
   <p>#FRIDAYSFORFUTURE SIND DRINGENDER WECKRUF – WIRTSCHAFT WILL ENDLICH MEHR KLIMASCHUTZ UMSETZEN </p>
-  <a class="btn btn-primary btn-lg" role="button" href="https://entrepreneurs4future.de/stellungnahme/" target="_blank">Hier unterzeichnen</a>
-</div>
+  <a class="btn btn-primary btn-lg" role="button" href="unterzeichnen.php?#1" >Jetzt unterzeichnen</a>
 
 <div>
 <p>

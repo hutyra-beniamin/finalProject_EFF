@@ -27,8 +27,6 @@ if ($_POST) {
    $sql = "INSERT INTO `entrepreneurs`(`name`, `company`, `url`, `city`, `country`) VALUES ('$name', '$company', '$url', '$address', '$country')";
    if($connect->query($sql) === TRUE) {
        echo "<h2>Vielen Dank für Dein Engagement!</h2>" ;
-    //    echo "<a href='../create.php'><button type='button'>Back</button></a>";
-    //     echo "<a href='../admin.php'><button type='button'>Home</button></a>";
    } else  {
        echo "Error " . $sql . ' ' . $connect->connect_error;
    }
@@ -39,7 +37,7 @@ if ($_POST) {
 ?>
 
 </div>
-<a class="btn btn-dark" type='button' role="button" href='../members.php'>Alle Unterzeichner'innen</a>
+<a class="btn btn-dark" type='button' role="button" href='../members.php'>Alle Unterzeichner*innen</a>
 </div>
 
 </body>

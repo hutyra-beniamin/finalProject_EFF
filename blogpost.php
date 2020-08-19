@@ -26,7 +26,7 @@ echo '
 <div class="col-sm-12 col-md-7 mt-4">
        <div class="card">
               <div class="card-body">
-              <h2>'.$xml->channel->item[$id]->title.'</h2>
+              <h1>'.$xml->channel->item[$id]->title.'</h1>
               <p>'.$xml->channel->item[$id]->pubDate.'</p>
               <br><hr><br>
               <p>'.$xml->channel->item[$id]->description.'</p>
