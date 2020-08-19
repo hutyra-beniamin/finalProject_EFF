@@ -17,7 +17,7 @@ require_once 'templates/nav.php';
     <div class="jumbotron jumbotron-fluid text-light text-center" id="hero_text">
         <div class="container">
         <h1 class="display-4">Entrepreneurs For Future</h1>
-        <hr class="my-4">
+        <!-- <hr class="my-4"> -->
         <h2 class="display-5">Wirtschaft will mehr Klimaschutz</h2>
         </div>
     </div>
@@ -65,28 +65,28 @@ require_once 'templates/nav.php';
     </div>
     <!-- Signed section ends-->
 
-        <!-- Sign section starts-->
-        <div class="container-fluid" id="sign">
+    <!-- Sign section starts-->
+    <div class="container-fluid" id="sign">
         <div class="container d-flex justify-content-around">
-            <div class="text-white text-center">
+            <div class="text-white text-center m-3">
                 <strong>
             Werden auch Sie Teil der Initiative #EntrepreneursForFuture und unterzeichnen Sie die Stellungnahme:
         </strong>
             </div>
             <div>
-                <a href="statement_at" class="btn btn-primary">Jetzt unterzeichnen!</a>
+                <a href="#" class="btn btn-primary btn-lg" id="sign_button">Jetzt unterzeichnen!</a>
             </div>
         </div>
     </div>
     <!-- Sign section ends-->
 
 <!-- Blog section starts-->
-<br>
+
     <div id="blog">
     <div class="container container-fluid ">
       
         <div class="container d-flex flex-wrap justify-content-around">
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-4" style="width: 18rem;">
                 <img src="img/img3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -96,7 +96,7 @@ require_once 'templates/nav.php';
                       </svg></a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-4" style="width: 18rem;">
                 <img src="img/img3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
