@@ -1,0 +1,189 @@
+div {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+
+/* navbar styling*/
+
+#logo {
+    width: 7vw !important;
+    height: 5vw !important;
+}
+
+#navbar {
+    background-color: #f3f9fb !important;
+    /*position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 1.5vw;*/
+}
+
+
+/* hero section styling */
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/img2.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero_text {
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+}
+
+
+/*About section styling */
+
+#about_img>img {
+    width: 15vw;
+    height: 25vh;
+    object-fit: contain;
+}
+
+div>b {
+    font-size: 1.5vw;
+}
+
+
+/*Blog section styling*/
+
+#blog {
+    background-color: #87c0cd;
+    margin-top: 0;
+    padding: 3vw;
+}
+
+.card {
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+
+/*Signed section styling*/
+
+#signed {
+    /* The image used */
+    background-image: url("../img/signed.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.signed_text {
+    font-size: 2vw;
+}
+
+
+/*Sign section styling*/
+
+#sign {
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+    margin-top: 4vw;
+    padding-top: 4.5vw;
+    padding-bottom: 4.5vw;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*Social Media section styling*/
+
+#social {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: #226597;
+}
+
+.facebook {
+    padding: 2vw;
+    border: 2px solid white;
+    width: 10%;
+    height: 10%;
+}
+
+.facebook:hover {
+    padding: 2vw;
+    border: 2px solid white;
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+.twitter {
+    padding: 2vw;
+    border: 2px solid white;
+    width: 10%;
+    height: 10%;
+}
+
+.twitter:hover {
+    padding: 2vw;
+    border: 2px solid white;
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+.instagram {
+    padding: 2vw;
+    border: 2px solid white;
+    width: 10%;
+    height: 10%;
+}
+
+.instagram:hover {
+    padding: 2vw;
+    border: 2px solid white;
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+.pintrest {
+    padding: 2vw;
+    border: 2px solid white;
+    width: 10%;
+    height: 10%;
+}
+
+.pintrest:hover {
+    padding: 2vw;
+    border: 2px solid white;
+    background: rgb(244, 251, 195) !important;
+    background: linear-gradient(152deg, rgba(244, 251, 195, 1) 0%, rgba(137, 200, 189, 1) 34%, rgba(18, 37, 107, 1) 100%) !important;
+    box-shadow: 32px 18px 9px -8px rgba(0, 0, 0, 0.74);
+}
+
+
+/*Contact section styling*/
+
+#contact {
+    padding: 2.5vw;
+    background-color: #87c0cd;
+}
+
+
+/*Footer section styling*/
+
+#footer {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: #113f67;
+}
+
+#footer div p>a {
+    text-decoration: none;
+    color: white;
+}
