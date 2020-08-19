@@ -1,6 +1,6 @@
 <script>
   let updateButtons = document.getElementsByClassName("update");
-  for (updateButton of updateButtons) {
+  for (let updateButton of updateButtons) {
     updateButton.addEventListener("click", () => {
       let post;
       let xhttp = new XMLHttpRequest();

@@ -57,7 +57,7 @@ require_once 'templates/nav.php';
     <div class="container-fluid text-center">
         <br>
         <br>
-        <h3 class="text-center"><?php echo $connect->query("SELECT COUNT(name) AS count FROM entrepreneurs")->fetch_object()->count ?></h3>
+        <h3 class="text-center"><?php echo $connect->query("SELECT COUNT(name) AS count FROM entrepreneure")->fetch_object()->count ?></h3>
 
         <br>
         <div class="signed_text"><strong>Unternehmen haben die Stellungnahme bereits unterzeichnet</strong></div>
