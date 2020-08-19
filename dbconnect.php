@@ -3,8 +3,8 @@
 error_reporting( ~E_DEPRECATED & ~E_NOTICE );
 $db_host = 'localhost';
 $db_username = 'root';
-$db_password = '';
-$db_name = '';
+$db_password = '%sKDC4kkzW';
+$db_name = 'final_project_team9';
 $connect = new mysqli($db_host, $db_username, $db_password, $db_name);
 
 $connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);

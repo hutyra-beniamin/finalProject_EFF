@@ -39,6 +39,7 @@ $xml = simplexml_load_string($response);
 </div>
 </div>';
             $i++;
+            if ($i == 5) break;
         }
         ?>
 

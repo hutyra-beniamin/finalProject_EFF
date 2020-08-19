@@ -12,10 +12,15 @@ require_once 'templates/nav.php';
 ?>
 
 <head>
+    <style>
+        #map {
+            height: 50vh;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mx-auto w-100 h-50" id="map">
+    <div class="container mx-auto w-100" id="map">
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&sensor=false"></script>
     <script>
@@ -30,7 +35,7 @@ require_once 'templates/nav.php';
                     addresses = JSON.parse(this.responseText).map(entrepreneur => entrepreneur.city);
                 }
             };
-            xhttp.open("GET", "http://server01.time4tech.at:8080/final_project/get_json.php?table=entrepreneurs&distinct=city", false);
+            xhttp.open("GET", "http://server01.time4tech.at:8080/finalProject_EFF/get_json.php?table=entrepreneurs&distinct=city", false);
             xhttp.send();
             //sets north-east and south-west of map
             let bounds = new google.maps.LatLngBounds(new google.maps.LatLng(46.250135, 9.081696),
