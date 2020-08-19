@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="db_insert_general.php" method="POST">
+      <form action="db_insert_general.php" method="POST" id="post-form">
         <input type="hidden" class="form-control" name="table" id="table" value="posts">
         <input type="hidden" class="form-control" name="user" id="user" value="<?php echo $connect->query("SELECT * FROM users WHERE id=" . $_SESSION['user'])->fetch_object()->name ?>">
         <div class="modal-body">
