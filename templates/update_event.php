@@ -9,7 +9,7 @@
           event = JSON.parse(this.responseText)[0];
         }
       };
-      xhttp.open("GET", `http://server01.time4tech.at:8080/final_project/get_json.php?table=events&id=${updateButton.dataset.id}`, false);
+      xhttp.open("GET", `get_json.php?table=events&id=${updateButton.dataset.id}`, false);
       xhttp.send();
       document.getElementById("title").value = event.title;
       document.getElementById("date").value = event.date;

@@ -35,7 +35,7 @@ require_once 'templates/nav.php';
                     addresses = JSON.parse(this.responseText).map(entrepreneur => entrepreneur.city);
                 }
             };
-            xhttp.open("GET", "http://server01.time4tech.at:8080/finalProject_EFF/get_json.php?table=entrepreneurs&distinct=city", false);
+            xhttp.open("GET", "get_json.php?table=entrepreneurs&distinct=city", false);
             xhttp.send();
             //sets north-east and south-west of map
             let bounds = new google.maps.LatLngBounds(new google.maps.LatLng(46.250135, 9.081696),
