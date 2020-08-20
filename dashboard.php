@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+require_once 'dbconnect.php';
 require_once 'templates/header.php';
 
 if ( !isset($_SESSION['user' ])!="" ) {
@@ -22,9 +23,10 @@ require_once 'templates/nav.php';
     <div class="parallax"></div>
     <div class="jumbotron jumbotron-fluid text-light text-center" id="hero_text">
         <div class="container">
-        <h1 class="display-4">Entrepreneurs For Future</h1>
+        <h2 class="display-6 m-1">ENTREPRENEURS<br>FOR<br>FUTURE</h2>
+        <br>
         <!-- <hr class="my-4"> -->
-        <h2 class="display-5">Wirtschaft will mehr Klimaschutz</h2>
+        <h2 class="display-5 m-1">Wirtschaft will mehr Klimaschutz</h2>
         </div>
     </div>
     <!--Hero section ends-->
@@ -62,7 +64,8 @@ require_once 'templates/nav.php';
     <div class="container-fluid text-center">
         <br>
         <br>
-        <h3 class="text-center">4,659</h3>
+        <!-- <h3 class="text-center">4,659</h3> -->
+        <h3 class="text-center"><?php echo $connect->query("SELECT COUNT(lastname) AS count FROM entrepreneure")->fetch_object()->count ?></h3>
 
         <br>
         <div class="signed_text"><strong>Unternehmen haben die Stellungnahme bereits unterzeichnet</strong></div>
@@ -88,32 +91,42 @@ require_once 'templates/nav.php';
 
 <!-- Blog section starts-->
 
-    <div id="blog">
-    <div class="container container-fluid ">
-      
-        <div class="container d-flex flex-wrap justify-content-around">
-            <div class="card mt-4" style="width: 18rem;">
-                <img src="img/img3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">See more <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                      </svg></a>
-                </div>
-            </div>
-            <div class="card mt-4" style="width: 18rem;">
-                <img src="img/img3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">See more <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                      </svg></a>
-                </div>
-            </div>
+<div id="blog">
+        <div class="container container-fluid ">
 
-
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <?php $post = $connect->query("SELECT * FROM posts WHERE id=(SELECT max(id) FROM posts)")->fetch_object(); ?>
+                            <h5 class="card-title"><?php echo $post->title; ?></h5>
+                            <p class="card-text"><?php echo (strlen($post->post) > 50 ? substr($post->post, 0, 50) . "..." : $post->post) ?></p>
+                            <a href="blog.php" class="btn btn-primary">See more
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <?php
+                            $event = $connect->query("SELECT * FROM events WHERE id=(SELECT max(id) FROM events)")->fetch_object();
+                            date_default_timezone_set('Europe/Vienna');
+                            setlocale(LC_ALL, 'de_AT');
+                            ?>
+                            <h5 class="card-title"><?php echo $event->title; ?></h5>
+                            <p class="card-text"><?php echo strftime("%d.%m.%Y %H:%M", strtotime($event->date . " " . $event->time)); ?> Uhr</p>
+                            <a href="termine.php" class="btn btn-primary">See more
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -143,6 +156,7 @@ require_once 'templates/nav.php';
         </div>
     </div>
     <!-- Social media section ends-->
+
 
     <!-- Contact section starts-->
     <div class="container-fluid text-center" id="contact">
@@ -225,7 +239,6 @@ require_once 'templates/nav.php';
                 </div>
     </div> -->
     <!-- Footer section ends-->
-
 
 <?php
 require_once "templates/footer.php";
