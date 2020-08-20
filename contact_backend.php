@@ -1,10 +1,10 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
-echo "hi";
 require_once 'dbconnect.php';
 require "./mail/PHPMailer.php";
 require "./mail/SMTP.php";
+require "./mail/Exception.php";
 
 if (!isset($_POST['name']) || !isset($_POST['surname']) || !isset($_POST['message']) || !isset($_POST['email'])) {
   header('Content-Type: application/json; charset=UTF-8');
@@ -61,7 +61,7 @@ $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 $mail->isSMTP();
-// $mail->SMTPDebug = 1;
+$mail->SMTPDebug = 1;
 $mail->Host = 'mail.elke.codefactory.live';
 $mail->SMTPAuth = true;
 $mail->Username = 'noreply@elke.codefactory.live';
@@ -70,14 +70,10 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = '587';
 
 $mail->setFrom('noreply@elke.codefactory.live', 'Entrepreneurs For Future');
-
 $mail->addAddress($email);
-
 $mail->Subject = 'Test';
-
 $mail->isHTML(true);
-
 $placeholders = ['%name%', '%surname%', '%message%', '%email%'];
 $mail->Body = str_replace($placeholders, $inputs, file_get_contents('mail/MailBody.html'));
 $mail->send();
-header('Location: ./contact.php');
+header('Location: ' . $_SERVER["HTTP_REFERER"]);
